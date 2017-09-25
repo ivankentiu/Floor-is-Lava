@@ -1,0 +1,563 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D55553EF1F78951C006B68E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55553EE1F78951C006B68E3 /* AppDelegate.swift */; };
+		D55553F11F78951C006B68E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55553F01F78951C006B68E3 /* ViewController.swift */; };
+		D55553F41F78951C006B68E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D55553F21F78951C006B68E3 /* Main.storyboard */; };
+		D55553F61F78951C006B68E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D55553F51F78951C006B68E3 /* Assets.xcassets */; };
+		D55553F91F78951C006B68E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D55553F71F78951C006B68E3 /* LaunchScreen.storyboard */; };
+		D55554041F78951C006B68E3 /* Floor_is_lavaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55554031F78951C006B68E3 /* Floor_is_lavaTests.swift */; };
+		D555540F1F78951C006B68E3 /* Floor_is_lavaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D555540E1F78951C006B68E3 /* Floor_is_lavaUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D55554001F78951C006B68E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D55553E31F78951C006B68E3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D55553EA1F78951C006B68E3;
+			remoteInfo = "Floor is lava";
+		};
+		D555540B1F78951C006B68E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D55553E31F78951C006B68E3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D55553EA1F78951C006B68E3;
+			remoteInfo = "Floor is lava";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D55553EB1F78951C006B68E3 /* Floor is lava.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Floor is lava.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D55553EE1F78951C006B68E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D55553F01F78951C006B68E3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D55553F31F78951C006B68E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D55553F51F78951C006B68E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D55553F81F78951C006B68E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D55553FA1F78951C006B68E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D55553FF1F78951C006B68E3 /* Floor is lavaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Floor is lavaTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D55554031F78951C006B68E3 /* Floor_is_lavaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Floor_is_lavaTests.swift; sourceTree = "<group>"; };
+		D55554051F78951C006B68E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D555540A1F78951C006B68E3 /* Floor is lavaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Floor is lavaUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D555540E1F78951C006B68E3 /* Floor_is_lavaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Floor_is_lavaUITests.swift; sourceTree = "<group>"; };
+		D55554101F78951C006B68E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D55553E81F78951C006B68E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D55553FC1F78951C006B68E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D55554071F78951C006B68E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D55553E21F78951C006B68E3 = {
+			isa = PBXGroup;
+			children = (
+				D55553ED1F78951C006B68E3 /* Floor is lava */,
+				D55554021F78951C006B68E3 /* Floor is lavaTests */,
+				D555540D1F78951C006B68E3 /* Floor is lavaUITests */,
+				D55553EC1F78951C006B68E3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D55553EC1F78951C006B68E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D55553EB1F78951C006B68E3 /* Floor is lava.app */,
+				D55553FF1F78951C006B68E3 /* Floor is lavaTests.xctest */,
+				D555540A1F78951C006B68E3 /* Floor is lavaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D55553ED1F78951C006B68E3 /* Floor is lava */ = {
+			isa = PBXGroup;
+			children = (
+				D55553EE1F78951C006B68E3 /* AppDelegate.swift */,
+				D55553F01F78951C006B68E3 /* ViewController.swift */,
+				D55553F21F78951C006B68E3 /* Main.storyboard */,
+				D55553F51F78951C006B68E3 /* Assets.xcassets */,
+				D55553F71F78951C006B68E3 /* LaunchScreen.storyboard */,
+				D55553FA1F78951C006B68E3 /* Info.plist */,
+			);
+			path = "Floor is lava";
+			sourceTree = "<group>";
+		};
+		D55554021F78951C006B68E3 /* Floor is lavaTests */ = {
+			isa = PBXGroup;
+			children = (
+				D55554031F78951C006B68E3 /* Floor_is_lavaTests.swift */,
+				D55554051F78951C006B68E3 /* Info.plist */,
+			);
+			path = "Floor is lavaTests";
+			sourceTree = "<group>";
+		};
+		D555540D1F78951C006B68E3 /* Floor is lavaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D555540E1F78951C006B68E3 /* Floor_is_lavaUITests.swift */,
+				D55554101F78951C006B68E3 /* Info.plist */,
+			);
+			path = "Floor is lavaUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D55553EA1F78951C006B68E3 /* Floor is lava */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D55554131F78951C006B68E3 /* Build configuration list for PBXNativeTarget "Floor is lava" */;
+			buildPhases = (
+				D55553E71F78951C006B68E3 /* Sources */,
+				D55553E81F78951C006B68E3 /* Frameworks */,
+				D55553E91F78951C006B68E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Floor is lava";
+			productName = "Floor is lava";
+			productReference = D55553EB1F78951C006B68E3 /* Floor is lava.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D55553FE1F78951C006B68E3 /* Floor is lavaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D55554161F78951D006B68E3 /* Build configuration list for PBXNativeTarget "Floor is lavaTests" */;
+			buildPhases = (
+				D55553FB1F78951C006B68E3 /* Sources */,
+				D55553FC1F78951C006B68E3 /* Frameworks */,
+				D55553FD1F78951C006B68E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D55554011F78951C006B68E3 /* PBXTargetDependency */,
+			);
+			name = "Floor is lavaTests";
+			productName = "Floor is lavaTests";
+			productReference = D55553FF1F78951C006B68E3 /* Floor is lavaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D55554091F78951C006B68E3 /* Floor is lavaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D55554191F78951D006B68E3 /* Build configuration list for PBXNativeTarget "Floor is lavaUITests" */;
+			buildPhases = (
+				D55554061F78951C006B68E3 /* Sources */,
+				D55554071F78951C006B68E3 /* Frameworks */,
+				D55554081F78951C006B68E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D555540C1F78951C006B68E3 /* PBXTargetDependency */,
+			);
+			name = "Floor is lavaUITests";
+			productName = "Floor is lavaUITests";
+			productReference = D555540A1F78951C006B68E3 /* Floor is lavaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D55553E31F78951C006B68E3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Ivan Ken Tiu";
+				TargetAttributes = {
+					D55553EA1F78951C006B68E3 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					D55553FE1F78951C006B68E3 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D55553EA1F78951C006B68E3;
+					};
+					D55554091F78951C006B68E3 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D55553EA1F78951C006B68E3;
+					};
+				};
+			};
+			buildConfigurationList = D55553E61F78951C006B68E3 /* Build configuration list for PBXProject "Floor is lava" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D55553E21F78951C006B68E3;
+			productRefGroup = D55553EC1F78951C006B68E3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D55553EA1F78951C006B68E3 /* Floor is lava */,
+				D55553FE1F78951C006B68E3 /* Floor is lavaTests */,
+				D55554091F78951C006B68E3 /* Floor is lavaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D55553E91F78951C006B68E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D55553F91F78951C006B68E3 /* LaunchScreen.storyboard in Resources */,
+				D55553F61F78951C006B68E3 /* Assets.xcassets in Resources */,
+				D55553F41F78951C006B68E3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D55553FD1F78951C006B68E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D55554081F78951C006B68E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D55553E71F78951C006B68E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D55553F11F78951C006B68E3 /* ViewController.swift in Sources */,
+				D55553EF1F78951C006B68E3 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D55553FB1F78951C006B68E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D55554041F78951C006B68E3 /* Floor_is_lavaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D55554061F78951C006B68E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D555540F1F78951C006B68E3 /* Floor_is_lavaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D55554011F78951C006B68E3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D55553EA1F78951C006B68E3 /* Floor is lava */;
+			targetProxy = D55554001F78951C006B68E3 /* PBXContainerItemProxy */;
+		};
+		D555540C1F78951C006B68E3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D55553EA1F78951C006B68E3 /* Floor is lava */;
+			targetProxy = D555540B1F78951C006B68E3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D55553F21F78951C006B68E3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D55553F31F78951C006B68E3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D55553F71F78951C006B68E3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D55553F81F78951C006B68E3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D55554111F78951C006B68E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D55554121F78951C006B68E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D55554141F78951C006B68E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 59ACBTQ2AR;
+				INFOPLIST_FILE = "Floor is lava/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "FinalShift.Floor-is-lava";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D55554151F78951D006B68E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 59ACBTQ2AR;
+				INFOPLIST_FILE = "Floor is lava/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "FinalShift.Floor-is-lava";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D55554171F78951D006B68E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 59ACBTQ2AR;
+				INFOPLIST_FILE = "Floor is lavaTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "FinalShift.Floor-is-lavaTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Floor is lava.app/Floor is lava";
+			};
+			name = Debug;
+		};
+		D55554181F78951D006B68E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 59ACBTQ2AR;
+				INFOPLIST_FILE = "Floor is lavaTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "FinalShift.Floor-is-lavaTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Floor is lava.app/Floor is lava";
+			};
+			name = Release;
+		};
+		D555541A1F78951D006B68E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 59ACBTQ2AR;
+				INFOPLIST_FILE = "Floor is lavaUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "FinalShift.Floor-is-lavaUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Floor is lava";
+			};
+			name = Debug;
+		};
+		D555541B1F78951D006B68E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 59ACBTQ2AR;
+				INFOPLIST_FILE = "Floor is lavaUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "FinalShift.Floor-is-lavaUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Floor is lava";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D55553E61F78951C006B68E3 /* Build configuration list for PBXProject "Floor is lava" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D55554111F78951C006B68E3 /* Debug */,
+				D55554121F78951C006B68E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D55554131F78951C006B68E3 /* Build configuration list for PBXNativeTarget "Floor is lava" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D55554141F78951C006B68E3 /* Debug */,
+				D55554151F78951D006B68E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D55554161F78951D006B68E3 /* Build configuration list for PBXNativeTarget "Floor is lavaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D55554171F78951D006B68E3 /* Debug */,
+				D55554181F78951D006B68E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D55554191F78951D006B68E3 /* Build configuration list for PBXNativeTarget "Floor is lavaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D555541A1F78951D006B68E3 /* Debug */,
+				D555541B1F78951D006B68E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D55553E31F78951C006B68E3 /* Project object */;
+}
