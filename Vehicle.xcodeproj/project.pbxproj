@@ -12,8 +12,6 @@
 		D55553F41F78951C006B68E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D55553F21F78951C006B68E3 /* Main.storyboard */; };
 		D55553F61F78951C006B68E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D55553F51F78951C006B68E3 /* Assets.xcassets */; };
 		D55553F91F78951C006B68E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D55553F71F78951C006B68E3 /* LaunchScreen.storyboard */; };
-		D55554041F78951C006B68E3 /* Floor_is_lavaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55554031F78951C006B68E3 /* Floor_is_lavaTests.swift */; };
-		D555540F1F78951C006B68E3 /* Floor_is_lavaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D555540E1F78951C006B68E3 /* Floor_is_lavaUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,19 +32,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D55553EB1F78951C006B68E3 /* Floor is lava.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Floor is lava.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D55553EB1F78951C006B68E3 /* Vehicle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vehicle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D55553EE1F78951C006B68E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D55553F01F78951C006B68E3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D55553F31F78951C006B68E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D55553F51F78951C006B68E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D55553F81F78951C006B68E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D55553FA1F78951C006B68E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D55553FF1F78951C006B68E3 /* Floor is lavaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Floor is lavaTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D55554031F78951C006B68E3 /* Floor_is_lavaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Floor_is_lavaTests.swift; sourceTree = "<group>"; };
-		D55554051F78951C006B68E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D555540A1F78951C006B68E3 /* Floor is lavaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Floor is lavaUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D555540E1F78951C006B68E3 /* Floor_is_lavaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Floor_is_lavaUITests.swift; sourceTree = "<group>"; };
-		D55554101F78951C006B68E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D55553FF1F78951C006B68E3 /* VehicleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VehicleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D555540A1F78951C006B68E3 /* VehicleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VehicleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,9 +71,7 @@
 		D55553E21F78951C006B68E3 = {
 			isa = PBXGroup;
 			children = (
-				D55553ED1F78951C006B68E3 /* Floor is lava */,
-				D55554021F78951C006B68E3 /* Floor is lavaTests */,
-				D555540D1F78951C006B68E3 /* Floor is lavaUITests */,
+				D55553ED1F78951C006B68E3 /* Vehicle */,
 				D55553EC1F78951C006B68E3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -87,14 +79,14 @@
 		D55553EC1F78951C006B68E3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D55553EB1F78951C006B68E3 /* Floor is lava.app */,
-				D55553FF1F78951C006B68E3 /* Floor is lavaTests.xctest */,
-				D555540A1F78951C006B68E3 /* Floor is lavaUITests.xctest */,
+				D55553EB1F78951C006B68E3 /* Vehicle.app */,
+				D55553FF1F78951C006B68E3 /* VehicleTests.xctest */,
+				D555540A1F78951C006B68E3 /* VehicleUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D55553ED1F78951C006B68E3 /* Floor is lava */ = {
+		D55553ED1F78951C006B68E3 /* Vehicle */ = {
 			isa = PBXGroup;
 			children = (
 				D55553EE1F78951C006B68E3 /* AppDelegate.swift */,
@@ -104,33 +96,15 @@
 				D55553F71F78951C006B68E3 /* LaunchScreen.storyboard */,
 				D55553FA1F78951C006B68E3 /* Info.plist */,
 			);
-			path = "Floor is lava";
-			sourceTree = "<group>";
-		};
-		D55554021F78951C006B68E3 /* Floor is lavaTests */ = {
-			isa = PBXGroup;
-			children = (
-				D55554031F78951C006B68E3 /* Floor_is_lavaTests.swift */,
-				D55554051F78951C006B68E3 /* Info.plist */,
-			);
-			path = "Floor is lavaTests";
-			sourceTree = "<group>";
-		};
-		D555540D1F78951C006B68E3 /* Floor is lavaUITests */ = {
-			isa = PBXGroup;
-			children = (
-				D555540E1F78951C006B68E3 /* Floor_is_lavaUITests.swift */,
-				D55554101F78951C006B68E3 /* Info.plist */,
-			);
-			path = "Floor is lavaUITests";
+			path = Vehicle;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D55553EA1F78951C006B68E3 /* Floor is lava */ = {
+		D55553EA1F78951C006B68E3 /* Vehicle */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D55554131F78951C006B68E3 /* Build configuration list for PBXNativeTarget "Floor is lava" */;
+			buildConfigurationList = D55554131F78951C006B68E3 /* Build configuration list for PBXNativeTarget "Vehicle" */;
 			buildPhases = (
 				D55553E71F78951C006B68E3 /* Sources */,
 				D55553E81F78951C006B68E3 /* Frameworks */,
@@ -140,14 +114,14 @@
 			);
 			dependencies = (
 			);
-			name = "Floor is lava";
+			name = Vehicle;
 			productName = "Floor is lava";
-			productReference = D55553EB1F78951C006B68E3 /* Floor is lava.app */;
+			productReference = D55553EB1F78951C006B68E3 /* Vehicle.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D55553FE1F78951C006B68E3 /* Floor is lavaTests */ = {
+		D55553FE1F78951C006B68E3 /* VehicleTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D55554161F78951D006B68E3 /* Build configuration list for PBXNativeTarget "Floor is lavaTests" */;
+			buildConfigurationList = D55554161F78951D006B68E3 /* Build configuration list for PBXNativeTarget "VehicleTests" */;
 			buildPhases = (
 				D55553FB1F78951C006B68E3 /* Sources */,
 				D55553FC1F78951C006B68E3 /* Frameworks */,
@@ -158,14 +132,14 @@
 			dependencies = (
 				D55554011F78951C006B68E3 /* PBXTargetDependency */,
 			);
-			name = "Floor is lavaTests";
+			name = VehicleTests;
 			productName = "Floor is lavaTests";
-			productReference = D55553FF1F78951C006B68E3 /* Floor is lavaTests.xctest */;
+			productReference = D55553FF1F78951C006B68E3 /* VehicleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		D55554091F78951C006B68E3 /* Floor is lavaUITests */ = {
+		D55554091F78951C006B68E3 /* VehicleUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D55554191F78951D006B68E3 /* Build configuration list for PBXNativeTarget "Floor is lavaUITests" */;
+			buildConfigurationList = D55554191F78951D006B68E3 /* Build configuration list for PBXNativeTarget "VehicleUITests" */;
 			buildPhases = (
 				D55554061F78951C006B68E3 /* Sources */,
 				D55554071F78951C006B68E3 /* Frameworks */,
@@ -176,9 +150,9 @@
 			dependencies = (
 				D555540C1F78951C006B68E3 /* PBXTargetDependency */,
 			);
-			name = "Floor is lavaUITests";
+			name = VehicleUITests;
 			productName = "Floor is lavaUITests";
-			productReference = D555540A1F78951C006B68E3 /* Floor is lavaUITests.xctest */;
+			productReference = D555540A1F78951C006B68E3 /* VehicleUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -207,7 +181,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D55553E61F78951C006B68E3 /* Build configuration list for PBXProject "Floor is lava" */;
+			buildConfigurationList = D55553E61F78951C006B68E3 /* Build configuration list for PBXProject "Vehicle" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -220,9 +194,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D55553EA1F78951C006B68E3 /* Floor is lava */,
-				D55553FE1F78951C006B68E3 /* Floor is lavaTests */,
-				D55554091F78951C006B68E3 /* Floor is lavaUITests */,
+				D55553EA1F78951C006B68E3 /* Vehicle */,
+				D55553FE1F78951C006B68E3 /* VehicleTests */,
+				D55554091F78951C006B68E3 /* VehicleUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -268,7 +242,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D55554041F78951C006B68E3 /* Floor_is_lavaTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +249,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D555540F1F78951C006B68E3 /* Floor_is_lavaUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,12 +257,12 @@
 /* Begin PBXTargetDependency section */
 		D55554011F78951C006B68E3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D55553EA1F78951C006B68E3 /* Floor is lava */;
+			target = D55553EA1F78951C006B68E3 /* Vehicle */;
 			targetProxy = D55554001F78951C006B68E3 /* PBXContainerItemProxy */;
 		};
 		D555540C1F78951C006B68E3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D55553EA1F78951C006B68E3 /* Floor is lava */;
+			target = D55553EA1F78951C006B68E3 /* Vehicle */;
 			targetProxy = D555540B1F78951C006B68E3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -428,7 +400,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 59ACBTQ2AR;
-				INFOPLIST_FILE = "Floor is lava/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Vehicle/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "FinalShift.Floor-is-lava";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -443,7 +415,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 59ACBTQ2AR;
-				INFOPLIST_FILE = "Floor is lava/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Vehicle/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "FinalShift.Floor-is-lava";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -465,7 +437,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Floor is lava.app/Floor is lava";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Vehicle.app/Vehicle";
 			};
 			name = Debug;
 		};
@@ -482,7 +454,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Floor is lava.app/Floor is lava";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Vehicle.app/Vehicle";
 			};
 			name = Release;
 		};
@@ -521,7 +493,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D55553E61F78951C006B68E3 /* Build configuration list for PBXProject "Floor is lava" */ = {
+		D55553E61F78951C006B68E3 /* Build configuration list for PBXProject "Vehicle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D55554111F78951C006B68E3 /* Debug */,
@@ -530,7 +502,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D55554131F78951C006B68E3 /* Build configuration list for PBXNativeTarget "Floor is lava" */ = {
+		D55554131F78951C006B68E3 /* Build configuration list for PBXNativeTarget "Vehicle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D55554141F78951C006B68E3 /* Debug */,
@@ -539,7 +511,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D55554161F78951D006B68E3 /* Build configuration list for PBXNativeTarget "Floor is lavaTests" */ = {
+		D55554161F78951D006B68E3 /* Build configuration list for PBXNativeTarget "VehicleTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D55554171F78951D006B68E3 /* Debug */,
@@ -548,7 +520,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D55554191F78951D006B68E3 /* Build configuration list for PBXNativeTarget "Floor is lavaUITests" */ = {
+		D55554191F78951D006B68E3 /* Build configuration list for PBXNativeTarget "VehicleUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D555541A1F78951D006B68E3 /* Debug */,

@@ -33,15 +33,20 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     }
     
     // pass in PlaneAnchor
-    func createLava(planeAnchor: ARPlaneAnchor) -> SCNNode {
+    func createConcrete(planeAnchor: ARPlaneAnchor) -> SCNNode {
         // base it on the size of planeAnchor
-        let lavaNode = SCNNode(geometry: SCNPlane(width: CGFloat(planeAnchor.extent.x), height: CGFloat(planeAnchor.extent.z)))
-        lavaNode.geometry?.firstMaterial?.diffuse.contents = #imageLiteral(resourceName: "Lava")
-        lavaNode.geometry?.firstMaterial?.isDoubleSided = true
-        lavaNode.eulerAngles = SCNVector3(90.degreesToRadians, 0, 0)
+        let concreteNode = SCNNode(geometry: SCNPlane(width: CGFloat(planeAnchor.extent.x), height: CGFloat(planeAnchor.extent.z)))
+        concreteNode.geometry?.firstMaterial?.diffuse.contents = #imageLiteral(resourceName: "concrete")
+        concreteNode.geometry?.firstMaterial?.isDoubleSided = true
+        concreteNode.eulerAngles = SCNVector3(90.degreesToRadians, 0, 0)
         // align to detected surface by centering it relative to the horizontal
-        lavaNode.position = SCNVector3(planeAnchor.center.x, planeAnchor.center.y, planeAnchor.center.z)
-        return lavaNode
+        concreteNode.position = SCNVector3(planeAnchor.center.x, planeAnchor.center.y, planeAnchor.center.z)
+        
+        // give floor a static body(unaffected by force or gravity) shortcut
+        let staticBody = SCNPhysicsBody.static()
+        concreteNode.physicsBody = staticBody
+        
+        return concreteNode
     }
     
     // when a new horizontal surface is detected (didAdd) , check ARAnchor added to sceneView
@@ -50,9 +55,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         guard let planeAnchor = anchor as? ARPlaneAnchor else { return }
         
         // have to replace that surface with lava
-        let lavaNode = createLava(planeAnchor: planeAnchor)
+        let concreteNode = createConcrete(planeAnchor: planeAnchor)
         // make sure lava node is position relative to the discovered node
-        node.addChildNode(lavaNode)
+        node.addChildNode(concreteNode)
         
         print("new flat surface detected, new ARPlaneAnchor added")
     }
@@ -66,8 +71,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             childNode.removeFromParentNode()
         }
         // then updated (plane anchor)
-        let lavaNode = createLava(planeAnchor: planeAnchor)
-        node.addChildNode(lavaNode)
+        let concreteNode = createConcrete(planeAnchor: planeAnchor)
+        node.addChildNode(concreteNode)
     }
     
     func renderer(_ renderer: SCNSceneRenderer, didRemove node: SCNNode, for anchor: ARAnchor) {
@@ -79,6 +84,29 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         }
     }
 
+    // add the car
+    @IBAction func addCar(_ sender: Any) {
+        guard let pointOfView = sceneView.pointOfView else { return }
+        let transform = pointOfView.transform
+        let orientation = SCNVector3(-transform.m31, -transform.m32, -transform.m33)
+        let location = SCNVector3(transform.m41, transform.m42, transform.m43)
+        let currentPositionOfCamera = orientation + location
+        
+        let box = SCNNode(geometry: SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0))
+        box.geometry?.firstMaterial?.diffuse.contents = UIColor.blue
+        box.position = currentPositionOfCamera
+        // add physics here
+        let body = SCNPhysicsBody(type: .dynamic, shape: SCNPhysicsShape(node: box, options: [SCNPhysicsShape.Option.keepAsCompound: true]))
+        
+        // apply body to box node
+        box.physicsBody = body
+        
+        self.sceneView.scene.rootNode.addChildNode(box)
+    }
+}
+
+func +(left: SCNVector3, right: SCNVector3) -> SCNVector3 {
+    return SCNVector3Make(left.x + right.x, left.y + right.y, left.z + right.z)
 }
 
 extension Int {
