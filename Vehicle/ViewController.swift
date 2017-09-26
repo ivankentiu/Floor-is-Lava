@@ -8,11 +8,13 @@
 
 import UIKit
 import ARKit
+import CoreMotion
 
 class ViewController: UIViewController, ARSCNViewDelegate {
 
     @IBOutlet weak var sceneView: ARSCNView!
     let configuration = ARWorldTrackingConfiguration()
+    let motionManager = CMMotionManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +27,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         // so that delegate function can get called!
         self.sceneView.delegate = self
+        self.setUpAccelerometer()
     }
 
     override func didReceiveMemoryWarning() {
@@ -92,16 +95,41 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let location = SCNVector3(transform.m41, transform.m42, transform.m43)
         let currentPositionOfCamera = orientation + location
         
-        let box = SCNNode(geometry: SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0))
-        box.geometry?.firstMaterial?.diffuse.contents = UIColor.blue
-        box.position = currentPositionOfCamera
+        // add the scene then car node
+        let scene = SCNScene(named: "Car-Scene.scn")
+        let frame = (scene?.rootNode.childNode(withName: "frame", recursively: false))!
+        
+        frame.position = currentPositionOfCamera
         // add physics here
-        let body = SCNPhysicsBody(type: .dynamic, shape: SCNPhysicsShape(node: box, options: [SCNPhysicsShape.Option.keepAsCompound: true]))
+        let body = SCNPhysicsBody(type: .dynamic, shape: SCNPhysicsShape(node: frame, options: [SCNPhysicsShape.Option.keepAsCompound: true]))
         
         // apply body to box node
-        box.physicsBody = body
+        frame.physicsBody = body
         
-        self.sceneView.scene.rootNode.addChildNode(box)
+        self.sceneView.scene.rootNode.addChildNode(frame)
+    }
+    
+    func setUpAccelerometer() {
+        if motionManager.isAccelerometerAvailable {
+            motionManager.accelerometerUpdateInterval = 1/60
+            // this function will get trigger 60 times a sec or 1/60
+            motionManager.startAccelerometerUpdates(to: .main, withHandler: { (accelerometerData, error) in
+                if let error = error {
+                    print(error.localizedDescription)
+                    return
+                }
+                self.accelerometerDidChange(acceleration: accelerometerData!.acceleration)
+            })
+        } else {
+            print("accelerometer not available")
+        }
+    }
+    
+    // call in block
+    func accelerometerDidChange(acceleration: CMAcceleration) {
+        print(acceleration.x)
+        print(acceleration.y)
+        print("")
     }
 }
 

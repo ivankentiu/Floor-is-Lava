@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D531140A1F7A20BF0010AB61 /* Car-Scene.scn in Resources */ = {isa = PBXBuildFile; fileRef = D53114091F7A20BF0010AB61 /* Car-Scene.scn */; };
 		D55553EF1F78951C006B68E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55553EE1F78951C006B68E3 /* AppDelegate.swift */; };
 		D55553F11F78951C006B68E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55553F01F78951C006B68E3 /* ViewController.swift */; };
 		D55553F41F78951C006B68E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D55553F21F78951C006B68E3 /* Main.storyboard */; };
@@ -32,6 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D53114091F7A20BF0010AB61 /* Car-Scene.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = "Car-Scene.scn"; sourceTree = "<group>"; };
 		D55553EB1F78951C006B68E3 /* Vehicle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vehicle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D55553EE1F78951C006B68E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D55553F01F78951C006B68E3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				D55553F51F78951C006B68E3 /* Assets.xcassets */,
 				D55553F71F78951C006B68E3 /* LaunchScreen.storyboard */,
 				D55553FA1F78951C006B68E3 /* Info.plist */,
+				D53114091F7A20BF0010AB61 /* Car-Scene.scn */,
 			);
 			path = Vehicle;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D531140A1F7A20BF0010AB61 /* Car-Scene.scn in Resources */,
 				D55553F91F78951C006B68E3 /* LaunchScreen.storyboard in Resources */,
 				D55553F61F78951C006B68E3 /* Assets.xcassets in Resources */,
 				D55553F41F78951C006B68E3 /* Main.storyboard in Resources */,
