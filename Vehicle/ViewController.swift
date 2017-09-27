@@ -17,7 +17,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     let motionManager = CMMotionManager()
     var vehicle = SCNPhysicsVehicle()
     var orientation: CGFloat = 0
-    var touched: Bool = false
+    var accelerationValues = [UIAccelerationValue(0), UIAccelerationValue(0)]
+    // touch from bool to Int
+    var touched: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,11 +42,14 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.touched = true
+        // if at least one finger touching screen (incremet by how many fingers touching screen)
+        guard let _ = touches.first else { return }
+        self.touched += touches.count
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.touched = false
+        // when fingers released
+        self.touched = 0
     }
     
     // pass in PlaneAnchor
@@ -104,20 +109,29 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 //        print("simulating Physics")
         
         var engineForce: CGFloat = 0
+        var brakingForce: CGFloat = 0
         // steer the wheel in index 2 and 3  in array (front wheels) base of orientation y
         self.vehicle.setSteeringAngle(-orientation, forWheelAt: 2)
         self.vehicle.setSteeringAngle(-orientation, forWheelAt: 3)
         
         // if user touching sceneView (force in newtons)
-        if self.touched == true {
+        if self.touched == 1 {
             engineForce = 5
+        } else if self.touched == 2 {
+            engineForce = -5
+        } else if self.touched == 3 {
+            brakingForce = 100
         } else {
             engineForce = 0
         }
         
-        //apply engine force to car
+        //apply engine force to car (backwheels)
         self.vehicle.applyEngineForce(engineForce, forWheelAt: 0)
         self.vehicle.applyEngineForce(engineForce, forWheelAt: 1)
+        
+        //apply breaking force to car (backwheels)
+        self.vehicle.applyBrakingForce(brakingForce, forWheelAt: 0)
+        self.vehicle.applyBrakingForce(brakingForce, forWheelAt: 1)
     }
 
     // add the car
@@ -173,13 +187,23 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     // call in block
     func accelerometerDidChange(acceleration: CMAcceleration) {
         
+        accelerationValues[1] = filtered(currentAcceleration: accelerationValues[1], updatedAcceleration: acceleration.y)
+        accelerationValues[0] = filtered(currentAcceleration: accelerationValues[0], updatedAcceleration: acceleration.x)
+        
         // if positive set orientation to the reverse - (if right hand side)
-        if acceleration.x > 0 {
-            self.orientation = -CGFloat(acceleration.y)
+        if accelerationValues[0] > 0 {
+            self.orientation = -CGFloat(accelerationValues[1])
         } else {
-            self.orientation = CGFloat(acceleration.y)
+            self.orientation = CGFloat(accelerationValues[1])
         }
     }
+    
+    // filter out any acceleration that's not gravitational
+    func filtered(currentAcceleration: Double, updatedAcceleration: Double) -> Double {
+        let kFilteringFactor = 0.5
+        return updatedAcceleration * kFilteringFactor + currentAcceleration * (1-kFilteringFactor)
+    }
+    
 }
 
 func +(left: SCNVector3, right: SCNVector3) -> SCNVector3 {
