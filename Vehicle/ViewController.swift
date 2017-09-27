@@ -17,6 +17,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     let motionManager = CMMotionManager()
     var vehicle = SCNPhysicsVehicle()
     var orientation: CGFloat = 0
+    var touched: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +37,14 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.touched = true
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.touched = false
     }
     
     // pass in PlaneAnchor
@@ -93,9 +102,22 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     // Physics simulation (called once per frame)
     func renderer(_ renderer: SCNSceneRenderer, didSimulatePhysicsAtTime time: TimeInterval) {
 //        print("simulating Physics")
+        
+        var engineForce: CGFloat = 0
         // steer the wheel in index 2 and 3  in array (front wheels) base of orientation y
-        self.vehicle.setSteeringAngle(orientation, forWheelAt: 2)
-        self.vehicle.setSteeringAngle(orientation, forWheelAt: 3)
+        self.vehicle.setSteeringAngle(-orientation, forWheelAt: 2)
+        self.vehicle.setSteeringAngle(-orientation, forWheelAt: 3)
+        
+        // if user touching sceneView (force in newtons)
+        if self.touched == true {
+            engineForce = 5
+        } else {
+            engineForce = 0
+        }
+        
+        //apply engine force to car
+        self.vehicle.applyEngineForce(engineForce, forWheelAt: 0)
+        self.vehicle.applyEngineForce(engineForce, forWheelAt: 1)
     }
 
     // add the car
@@ -122,6 +144,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         chassis.position = currentPositionOfCamera
         // add physics here
         let body = SCNPhysicsBody(type: .dynamic, shape: SCNPhysicsShape(node: chassis, options: [SCNPhysicsShape.Option.keepAsCompound: true]))
+        body.mass = 1
         
         // apply body to box node
         chassis.physicsBody = body
