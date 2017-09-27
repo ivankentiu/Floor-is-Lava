@@ -16,6 +16,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     let configuration = ARWorldTrackingConfiguration()
     let motionManager = CMMotionManager()
     var vehicle = SCNPhysicsVehicle()
+    var orientation: CGFloat = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +30,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // so that delegate function can get called!
         self.sceneView.delegate = self
         self.setUpAccelerometer()
+        self.sceneView.showsStatistics = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -87,6 +89,14 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             childNode.removeFromParentNode()
         }
     }
+    
+    // Physics simulation (called once per frame)
+    func renderer(_ renderer: SCNSceneRenderer, didSimulatePhysicsAtTime time: TimeInterval) {
+//        print("simulating Physics")
+        // steer the wheel in index 2 and 3  in array (front wheels) base of orientation y
+        self.vehicle.setSteeringAngle(orientation, forWheelAt: 2)
+        self.vehicle.setSteeringAngle(orientation, forWheelAt: 3)
+    }
 
     // add the car
     @IBAction func addCar(_ sender: Any) {
@@ -139,9 +149,13 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     // call in block
     func accelerometerDidChange(acceleration: CMAcceleration) {
-        print(acceleration.x)
-        print(acceleration.y)
-        print("")
+        
+        // if positive set orientation to the reverse - (if right hand side)
+        if acceleration.x > 0 {
+            self.orientation = -CGFloat(acceleration.y)
+        } else {
+            self.orientation = CGFloat(acceleration.y)
+        }
     }
 }
 
