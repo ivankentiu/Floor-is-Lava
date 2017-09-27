@@ -15,6 +15,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet weak var sceneView: ARSCNView!
     let configuration = ARWorldTrackingConfiguration()
     let motionManager = CMMotionManager()
+    var vehicle = SCNPhysicsVehicle()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -97,16 +98,27 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         // add the scene then car node
         let scene = SCNScene(named: "Car-Scene.scn")
-        let frame = (scene?.rootNode.childNode(withName: "frame", recursively: false))!
+        let chassis = (scene?.rootNode.childNode(withName: "chassis", recursively: false))!
+        let frontLeftWheel = (chassis.childNode(withName: "frontLeftParent", recursively: false))!
+        let frontRightWheel = (chassis.childNode(withName: "frontRightParent", recursively: false))!
+        let rearLeftWheel = (chassis.childNode(withName: "rearLeftParent", recursively: false))!
+        let rearRightWheel = (chassis.childNode(withName: "rearRightParent", recursively: false))!
         
-        frame.position = currentPositionOfCamera
+        let v_frontLeftWheel = SCNPhysicsVehicleWheel(node: frontLeftWheel)
+        let v_frontRightWheel = SCNPhysicsVehicleWheel(node: frontRightWheel)
+        let v_rearLeftWheel = SCNPhysicsVehicleWheel(node: rearLeftWheel)
+        let v_rearRightWheel = SCNPhysicsVehicleWheel(node: rearRightWheel)
+        
+        chassis.position = currentPositionOfCamera
         // add physics here
-        let body = SCNPhysicsBody(type: .dynamic, shape: SCNPhysicsShape(node: frame, options: [SCNPhysicsShape.Option.keepAsCompound: true]))
+        let body = SCNPhysicsBody(type: .dynamic, shape: SCNPhysicsShape(node: chassis, options: [SCNPhysicsShape.Option.keepAsCompound: true]))
         
         // apply body to box node
-        frame.physicsBody = body
-        
-        self.sceneView.scene.rootNode.addChildNode(frame)
+        chassis.physicsBody = body
+        self.vehicle = SCNPhysicsVehicle(chassisBody: chassis.physicsBody!, wheels: [v_rearRightWheel, v_rearLeftWheel, v_frontRightWheel, v_frontLeftWheel])
+        // add behaviour to car
+        self.sceneView.scene.physicsWorld.addBehavior(self.vehicle)
+        self.sceneView.scene.rootNode.addChildNode(chassis)
     }
     
     func setUpAccelerometer() {
